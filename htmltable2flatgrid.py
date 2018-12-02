@@ -3,7 +3,7 @@
 # coding: utf-8
 
 # how to use: htmltable2flatgrid "http://...." 2
-# 2 to get second table
+# 2 to get the third table
 
 
 import os
@@ -122,13 +122,13 @@ class html_tables(object):
         return(self.tables)
 
 
-wiki_url = sys.argv[1]
-wiki = html_tables(wiki_url)
-wiki_table = wiki.read()[int(sys.argv[2])]
-wiki_table.replace({'\xa0': ' '}, regex=True,inplace=True)
+sourceURL = sys.argv[1]
+htmlTables = html_tables(sourceURL)
+tableToGet = htmlTables.read()[int(sys.argv[2])]
+tableToGet.replace({'\xa0': ' '}, regex=True,inplace=True)
 '''
-df_obj = wiki_table.select_dtypes(['object'])
-wiki_table[df_obj.columns] = df_obj.apply(lambda x: x.str.strip())
+df_obj = tableToGet.select_dtypes(['object'])
+tableToGet[df_obj.columns] = df_obj.apply(lambda x: x.str.strip())
 '''
-wiki_table.to_csv("./table.csv",encoding="utf-8",index=False)
+tableToGet.to_csv("./table.csv",encoding="utf-8",index=False)
 
