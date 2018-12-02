@@ -3,7 +3,7 @@
 # coding: utf-8
 
 # how to use: htmltable2flatgrid "http://...." 2
-# 2 because I want the 2 table
+# 2 to get second table
 
 
 import os
@@ -16,10 +16,12 @@ import pandas as pd
 import numpy as np
 from bs4 import BeautifulSoup 
 
-
-
-
-
+try:   
+   sys.argv[1]
+   sys.argv[2]
+except IndexError:  
+   print("You must insert both the URL of the page that contains the table and the number of the table you want extract: \n\n\thtmltable2flatgrid.py \"http://....\" 2\n\n2 is in example the third table and 0 is the first")
+   sys.exit()
 
 class html_tables(object):
     
@@ -99,7 +101,7 @@ class html_tables(object):
                             col_counter += 1
 
                         # Get cell contents  
-                        cell_data = col.get_text()
+                        cell_data = col.get_text().strip() 
                         
                         # Insert data into cell
                         df.iat[row_counter, col_counter] = cell_data
@@ -123,5 +125,10 @@ class html_tables(object):
 wiki_url = sys.argv[1]
 wiki = html_tables(wiki_url)
 wiki_table = wiki.read()[int(sys.argv[2])]
+wiki_table.replace({'\xa0': ' '}, regex=True,inplace=True)
+'''
+df_obj = wiki_table.select_dtypes(['object'])
+wiki_table[df_obj.columns] = df_obj.apply(lambda x: x.str.strip())
+'''
 wiki_table.to_csv("./table.csv",encoding="utf-8",index=False)
 
