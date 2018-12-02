@@ -18,9 +18,9 @@ The current mode is:
 - download the python script and give it execution permission;
 - run it using the two arguments it needs: a source URL and the index of the table (starting at 0) which identifies which one in the HTML source should be returned (in a single webpage you can have more than one table).
 
-In example to extract the data from the twelfth table of "Academy Award for Best Picture" Wikipedia page -  https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture - the command is:
+In example to extract the data from the twelfth table of "Academy Award for Best Picture" Wikipedia page -  https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture - the command is (I have cloned it [here](https://aborruso.github.io/htmltable2flatgrid/exampleInput/)):
 
-    ./htmltable2flatgrid.py "https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture" 11
+    ./htmltable2flatgrid.py "https://aborruso.github.io/htmltable2flatgrid/exampleInput/" 11
 
 In output you have [this CSV](./exampleOutput/table.csv) (a preview below).
 
