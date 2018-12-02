@@ -32,7 +32,7 @@ The current mode to use it is:
 - download the [python script](./htmltable2flatgrid.py) and give it execution permission;
 - run it using the two arguments it needs: the source URL and the index of the table (starting at 0) which identifies which one in the HTML source should be returned (in a single webpage you can have more than one table).
 
-In example to extract the data from the twelfth table of "Academy Award for Best Picture" Wikipedia page -  https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture - the command is (I have cloned it [here](https://aborruso.github.io/htmltable2flatgrid/exampleInput/)):
+In example to extract the data from the twelfth table of "Academy Award for Best Picture" Wikipedia page -  [https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture](https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture?oldformat=true#2010s) - the command is (I have cloned it [here](https://aborruso.github.io/htmltable2flatgrid/exampleInput/)):
 
     ./htmltable2flatgrid.py "https://aborruso.github.io/htmltable2flatgrid/exampleInput/" 11
 
@@ -40,7 +40,7 @@ In output you will have [this CSV](./exampleOutput/table.csv) (below a markdown 
 
 ## Notes
 
-- I have not tested it with an HTML page badly formatted;
+- I have not tested it with an HTML page badly formatted (with errors, not HTML compliant);
 - the script does not check if the source webpage is reachable.
 
 ## Output markdown preview
