@@ -1,19 +1,31 @@
+<!-- TOC -->
+
+- [htmltable2flatgrid](#htmltable2flatgrid)
+    - [Why I need it](#why-i-need-it)
+    - [How to use it](#how-to-use-it)
+    - [Notes](#notes)
+    - [Output markdown preview](#output-markdown-preview)
+
+<!-- /TOC -->
+
 # htmltable2flatgrid
 
-This script is a clone of the one you find in this great post of **John Ricco**: https://johnricco.github.io/2017/04/04/python-html/
-
-The goal is to convert an **HTML table** with **colspan** and **rowspan**, in a clean CSV file with all **cells** properly **splitted** (as in the image below).
+It's a **Python 3** script whose goale is to **convert** an **HTML table** with **colspan** and **rowspan**, in a clean CSV file with all **cells** properly **splitted** (as in the image below).
 
 ![](./htmltable2flatgrid.png)
 
-I changed it slightly:
+This script is a clone of the one you find in this great post of **John Ricco**: https://johnricco.github.io/2017/04/04/python-html/
+
+I changed the John's one slightly:
 
 - I have added **`strip()`** function to clean the text of the table cells;
 - I want to use it as **command-line** utiliy.
 
-## How to use it
+## Why I need it
 
-It's a **Python 3** script.
+Because I do not find a Python module (or a command-line utility) able to extract properly a CSV table from an HTML table with **colspan** and **rowspan** (i R you have it, but I'm not a R user).
+
+## How to use it
 
 The current mode to use it is:
 
@@ -25,6 +37,13 @@ In example to extract the data from the twelfth table of "Academy Award for Best
     ./htmltable2flatgrid.py "https://aborruso.github.io/htmltable2flatgrid/exampleInput/" 11
 
 In output you will have [this CSV](./exampleOutput/table.csv) (below a markdown preview).
+
+## Notes
+
+- I have not tested it with an HTML page badly formatted;
+- the script does not check if the source webpage is reachable.
+
+## Output markdown preview
 
 | 0 | 1 | 2 |
 | --- | --- | --- |
