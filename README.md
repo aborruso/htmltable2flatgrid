@@ -30,7 +30,7 @@ Because I do not find a Python module (or a command-line utility) able to extrac
 The current mode to use it is:
 
 - download the [python script](./htmltable2flatgrid.py) and give it execution permission;
-- run it using the two arguments it needs: a source URL and the index of the table (starting at 0) which identifies which one in the HTML source should be returned (in a single webpage you can have more than one table).
+- run it using the two arguments it needs: the source URL and the index of the table (starting at 0) which identifies which one in the HTML source should be returned (in a single webpage you can have more than one table).
 
 In example to extract the data from the twelfth table of "Academy Award for Best Picture" Wikipedia page -  https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture - the command is (I have cloned it [here](https://aborruso.github.io/htmltable2flatgrid/exampleInput/)):
 
