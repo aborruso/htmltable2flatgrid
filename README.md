@@ -10,7 +10,7 @@
 
 # htmltable2flatgrid
 
-It's a **Python 3** script whose goale is to **convert** an **HTML table** with **colspan** and **rowspan**, in a clean CSV file with all **cells** properly **splitted** (as in the image below).
+It's a **Python 3** script whose goal is to **convert** an **HTML table** with **colspan** and **rowspan**, in a clean CSV file with all **cells** properly **splitted** (as in the image below).
 
 ![](./htmltable2flatgrid.png)
 
