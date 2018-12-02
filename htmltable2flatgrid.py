@@ -126,9 +126,5 @@ sourceURL = sys.argv[1]
 htmlTables = html_tables(sourceURL)
 tableToGet = htmlTables.read()[int(sys.argv[2])]
 tableToGet.replace({'\xa0': ' '}, regex=True,inplace=True)
-'''
-df_obj = tableToGet.select_dtypes(['object'])
-tableToGet[df_obj.columns] = df_obj.apply(lambda x: x.str.strip())
-'''
 tableToGet.to_csv("./table.csv",encoding="utf-8",index=False)
 
