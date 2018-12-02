@@ -22,7 +22,7 @@ In example to extract the data from the twelfth table of "Academy Award for Best
 
     ./htmltable2flatgrid.py "https://aborruso.github.io/htmltable2flatgrid/exampleInput/" 11
 
-In output you have [this CSV](./exampleOutput/table.csv) (a preview below).
+In output you will have [this CSV](./exampleOutput/table.csv) (below a markdown preview).
 
 | 0 | 1 | 2 |
 | --- | --- | --- |
