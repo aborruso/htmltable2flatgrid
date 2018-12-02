@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 # coding: utf-8
+# A clone of https://johnricco.github.io/2017/04/04/python-html/
 
 # how to use: htmltable2flatgrid "http://...." 2
 # 2 to get the third table
