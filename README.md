@@ -1,21 +1,23 @@
 # htmltable2flatgrid
 
-This script is a clone of the one you find in this great post of John Ricco: https://johnricco.github.io/2017/04/04/python-html/
+This script is a clone of the one you find in this great post of **John Ricco**: https://johnricco.github.io/2017/04/04/python-html/
 
-The goal is to convert an HTML table with colspan and rowspan, in a clean CSV file with all cells properly splitted (as in the image below).
+The goal is to convert an **HTML table** with **colspan** and **rowspan**, in a clean CSV file with all **cells** properly **splitted** (as in the image below).
 
 ![](./htmltable2flatgrid.png)
 
 I changed it slightly:
 
-- I have added `strip()` function to clean the text of the table cells;
-- I want to use it as command-line utiliy.
+- I have added **`strip()`** function to clean the text of the table cells;
+- I want to use it as **command-line** utiliy.
 
 ## How to use it
 
-The current mode is:
+It's a **Python 3** script.
 
-- download the python script and give it execution permission;
+The current mode to use it is:
+
+- download the [python script](./htmltable2flatgrid.py) and give it execution permission;
 - run it using the two arguments it needs: a source URL and the index of the table (starting at 0) which identifies which one in the HTML source should be returned (in a single webpage you can have more than one table).
 
 In example to extract the data from the twelfth table of "Academy Award for Best Picture" Wikipedia page -  https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture - the command is (I have cloned it [here](https://aborruso.github.io/htmltable2flatgrid/exampleInput/)):
